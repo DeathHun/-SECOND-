@@ -1,6 +1,6 @@
 [gd_scene load_steps=23 format=3 uid="uid://d17ejxaqp08vu"]
 
-[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_xqru5"]
+[ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_1uckq"]
 [ext_resource type="Texture2D" uid="uid://cwpc1e36a5ic7" path="res://Sprites/EpisodeOne/09-Idle Sword/Idle Sword 02.png" id="2_064b3"]
 [ext_resource type="Texture2D" uid="uid://by0i43d2dsy8d" path="res://Sprites/EpisodeTwo/11-Jump Sword/Jump Sword 01.png" id="2_pgq13"]
 [ext_resource type="Texture2D" uid="uid://cfn68x1o7kr2v" path="res://Sprites/EpisodeOne/09-Idle Sword/Idle Sword 01.png" id="3_tlpiu"]
@@ -97,8 +97,7 @@ _data = {
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(3.8147e-06, 0)
 scale = Vector2(1.5455, 1.47776)
-script = ExtResource("1_xqru5")
-speed = 200.0
+script = ExtResource("1_1uckq")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -106,8 +105,7 @@ position = Vector2(-2.46826e-06, -18.2709)
 texture = ExtResource("3_tlpiu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0.647037, -20.301)
-scale = Vector2(1, 1)
+position = Vector2(-3.8147e-06, -20.301)
 shape = SubResource("RectangleShape2D_t8lrd")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -116,7 +114,19 @@ libraries = {
 }
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(1.94112, -10.8272)
+position = Vector2(10.3526, -18.9476)
 limit_smoothed = true
 position_smoothing_enabled = true
 rotation_smoothing_enabled = true
+
+[node name="CoyoteTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(1, 1)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-3.8147e-06, -20.301)
+shape = SubResource("RectangleShape2D_t8lrd")
+
+[connection signal="timeout" from="CoyoteTimer" to="." method="Coyote_Timeout"]
