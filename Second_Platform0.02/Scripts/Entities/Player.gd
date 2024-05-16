@@ -5,6 +5,7 @@ class_name Player
 @onready var sprite :Sprite2D = $Sprite2D
 @onready var coyote_timer = $CoyoteTimer
 
+@export var attacking = false
 @export var speed  = 200.0
 @export var jump_velocity = -400.0
 @export var friction = 3000
@@ -20,6 +21,10 @@ var jump_available : bool = true
 
 func _ready():
 	GameManager.player = self
+
+func _process(delta):
+	if Input.is_action_just_pressed("attack"):
+		attack()
 
 
 func _physics_process(delta):
@@ -61,7 +66,9 @@ func jump_action():
 	if not is_on_floor():
 		if jump_available:
 			if coyote_timer.is_stopped():
+				air_jump = true
 				coyote_timer.start(Coyote_Time)
+			
 
 	
 	if Input.is_action_just_pressed("jump") and jump_available:
@@ -89,21 +96,28 @@ func handle_wall_jump():
 		velocity.y = jump_velocity
 
 func update_animation():
-	if Input.is_action_just_pressed("left"):
-		sprite.scale.x = abs(sprite.scale.x) * -1
-	if Input.is_action_just_pressed("right"):
-		sprite.scale.x = abs(sprite.scale.x)
-	if velocity.x != 0 and is_on_floor():
-		animation.play("Run")
-	if velocity.x == 0 and is_on_floor():
-		animation.play("Idle")
-	if velocity.y < 0 and not is_on_floor():
-		animation.play("Jump")
-	if velocity.y > 0 and not is_on_floor():
-		animation.play("Fall")
+	if !attacking:
+		if Input.is_action_just_pressed("left"):
+			sprite.scale.x = abs(sprite.scale.x) * -1
+		if Input.is_action_just_pressed("right"):
+			sprite.scale.x = abs(sprite.scale.x)
+		if velocity.x != 0 and is_on_floor():
+			animation.play("Run")
+		if velocity.x == 0 and is_on_floor():
+			animation.play("Idle")
+		if velocity.y < 0 and not is_on_floor():
+			animation.play("Jump")
+		if velocity.y > 0 and not is_on_floor():
+			animation.play("Fall")
 
 func crouch():
 	pass
 
 func death():
 	GameManager.respawn_player()
+
+func attack():
+	var overlapping_objects = $AttackArea.get_overlapping_areas()
+	
+	attacking = true
+	animation.play("Attack")
