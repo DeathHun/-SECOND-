@@ -99,8 +99,13 @@ func update_animation():
 	if !attacking:
 		if Input.is_action_just_pressed("left"):
 			sprite.scale.x = abs(sprite.scale.x) * -1
+			$Area2D.scale.x = abs($Area2D.scale.x) * -1
+			$AttackArea.scale.x = abs($AttackArea.scale.x) * -1
 		if Input.is_action_just_pressed("right"):
 			sprite.scale.x = abs(sprite.scale.x)
+			$Area2D.scale.x = abs($Area2D.scale.x)
+			$AttackArea.scale.x = abs($AttackArea.scale.x) 
+			
 		if velocity.x != 0 and is_on_floor():
 			animation.play("Run")
 		if velocity.x == 0 and is_on_floor():

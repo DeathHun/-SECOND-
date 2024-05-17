@@ -23,6 +23,34 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t8lrd"]
 size = Vector2(20.9997, 26.2408)
 
+[sub_resource type="Animation" id="Animation_owxlx"]
+resource_name = "Attack"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("18_3oprx"), ExtResource("19_41j6i"), ExtResource("2_75ru0")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:attacking")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
 [sub_resource type="Animation" id="Animation_5oxy0"]
 resource_name = "Fall"
 loop_mode = 1
@@ -90,34 +118,6 @@ tracks/0/keys = {
 "values": [ExtResource("9_6j1q8"), ExtResource("10_wetw8"), ExtResource("11_5ksm5"), ExtResource("11_5ksm5"), ExtResource("12_m221e"), ExtResource("13_xj6r6"), ExtResource("14_1pus2")]
 }
 
-[sub_resource type="Animation" id="Animation_owxlx"]
-resource_name = "Attack"
-length = 0.2
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:texture")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 1,
-"values": [ExtResource("18_3oprx"), ExtResource("19_41j6i"), ExtResource("2_75ru0")]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath(".:attacking")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0.2),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_27e12"]
 _data = {
 "Attack": SubResource("Animation_owxlx"),
@@ -138,7 +138,7 @@ script = ExtResource("1_1uckq")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 1.68962)
-texture = ExtResource("2_75ru0")
+texture = ExtResource("3_tlpiu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t8lrd")
@@ -172,7 +172,7 @@ shape = SubResource("RectangleShape2D_t8lrd")
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(19.3867, 0.844809)
+position = Vector2(19.3867, 6.75847)
 scale = Vector2(0.99628, 0.544708)
 shape = SubResource("CircleShape2D_tda7h")
 

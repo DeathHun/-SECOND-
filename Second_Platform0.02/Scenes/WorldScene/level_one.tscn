@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://byl1drg3qhgfg"]
+[gd_scene load_steps=14 format=3 uid="uid://byl1drg3qhgfg"]
 
 [ext_resource type="Texture2D" uid="uid://cym5u1f0nctbl" path="res://Sprites/EpisodeFour/Spritesheet/BG Image.png" id="1_wcbnj"]
 [ext_resource type="PackedScene" uid="uid://d17ejxaqp08vu" path="res://Scenes/Entities/player.tscn" id="2_8nik0"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://q4786ho3pop8" path="res://Scenes/Interactables/coin.tscn" id="7_1ckyl"]
 [ext_resource type="Texture2D" uid="uid://cbbwq1rvnp8im" path="res://Sprites/EpisodeSixteen/Coin.png" id="8_apsqy"]
 [ext_resource type="Script" path="res://Scripts/UI/UiManager.gd" id="8_w4nnm"]
+[ext_resource type="PackedScene" uid="uid://b14q5wl5f5twu" path="res://Scenes/Entities/saber_tooth_enemy.tscn" id="10_bhy64"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lyt7b"]
 texture = ExtResource("2_d0h08")
@@ -1157,10 +1158,10 @@ sources/1 = SubResource("TileSetAtlasSource_bul0i")
 [node name="LevelOne" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -5028.0
-offset_top = -1708.0
-offset_right = -1875.0
-offset_bottom = -657.0
+offset_left = -5075.0
+offset_top = -1675.0
+offset_right = -1922.0
+offset_bottom = -624.0
 scale = Vector2(3.36928, 3.27211)
 texture = ExtResource("1_wcbnj")
 
@@ -1292,3 +1293,18 @@ offset_bottom = 30.0
 theme_override_colors/font_color = Color(0.760784, 0.372549, 0.384314, 1)
 theme_override_font_sizes/font_size = 18
 text = "0"
+
+[node name="SaberTooth_Enemy" parent="." instance=ExtResource("10_bhy64")]
+position = Vector2(429, 448)
+
+[node name="SaberTooth_Enemy2" parent="." instance=ExtResource("10_bhy64")]
+position = Vector2(832, 479)
+
+[node name="SaberTooth_Enemy3" parent="." instance=ExtResource("10_bhy64")]
+position = Vector2(425, 193)
+
+[node name="SaberTooth_Enemy4" parent="." instance=ExtResource("10_bhy64")]
+position = Vector2(758, 208)
+
+[node name="SaberTooth_Enemy5" parent="." instance=ExtResource("10_bhy64")]
+position = Vector2(1167, 192)
