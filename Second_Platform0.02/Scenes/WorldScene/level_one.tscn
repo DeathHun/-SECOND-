@@ -1294,17 +1294,19 @@ theme_override_colors/font_color = Color(0.760784, 0.372549, 0.384314, 1)
 theme_override_font_sizes/font_size = 18
 text = "0"
 
-[node name="SaberTooth_Enemy" parent="." instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Holder" type="Node2D" parent="."]
+
+[node name="SaberTooth_Enemy" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
 position = Vector2(429, 448)
 
-[node name="SaberTooth_Enemy2" parent="." instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy2" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
 position = Vector2(832, 479)
 
-[node name="SaberTooth_Enemy3" parent="." instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy3" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
 position = Vector2(425, 193)
 
-[node name="SaberTooth_Enemy4" parent="." instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy4" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
 position = Vector2(758, 208)
 
-[node name="SaberTooth_Enemy5" parent="." instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy5" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
 position = Vector2(1167, 192)

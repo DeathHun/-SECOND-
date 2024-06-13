@@ -124,5 +124,9 @@ func death():
 func attack():
 	var overlapping_objects = $AttackArea.get_overlapping_areas()
 	
+	for area in overlapping_objects:
+		if area.get_parent().is_in_group("Enemies"):
+			area.get_parent().death()
+	
 	attacking = true
 	animation.play("Attack")
