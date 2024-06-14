@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=3 uid="uid://bcsedquosnj3k"]
+
+[ext_resource type="Script" path="res://Scripts/Interactables/falling_spikes.gd" id="1_gpl80"]
+[ext_resource type="Texture2D" uid="uid://h7q6vkjbam4p" path="res://GameAssets/Episode8/Spikes.png" id="1_sisy3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyto0"]
+size = Vector2(34, 123)
+
+[sub_resource type="Animation" id="Animation_of8yw"]
+resource_name = "Shake"
+length = 0.4
+loop_mode = 1
+step = 0.05
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(5, 0), Vector2(-5, 0), Vector2(5, 0), Vector2(-5, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_48nip"]
+_data = {
+"Shake": SubResource("Animation_of8yw")
+}
+
+[node name="FallingSpikes" type="Node2D"]
+script = ExtResource("1_gpl80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 3.14159
+texture = ExtResource("1_sisy3")
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Hitbox"]
+polygon = PackedVector2Array(-10, -16, -10, -13, -12, -11, -11, -6, -9, -3, -8, -3, -1, 0, 0, 0, 2, -3, 3, -5, 8, -5, 9, -6, 10, -8, 11, -10, 11, -13, 9, -16)
+
+[node name="Playerdetect" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Playerdetect"]
+position = Vector2(0, 45.5)
+shape = SubResource("RectangleShape2D_qyto0")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_48nip")
+}
+
+[connection signal="area_entered" from="Hitbox" to="." method="_on_hitbox_area_entered"]
+[connection signal="area_entered" from="Playerdetect" to="." method="_on_playerdetect_area_entered"]

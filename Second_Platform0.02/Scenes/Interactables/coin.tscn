@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://q4786ho3pop8"]
 
 [ext_resource type="Script" path="res://Scripts/Interactables/coin.gd" id="1_xxggl"]
-[ext_resource type="Texture2D" uid="uid://dn52e3sicx4vq" path="res://Sprites/EpisodeFour/Coin/01.png" id="2_y1b75"]
-[ext_resource type="Texture2D" uid="uid://b33m82baxl237" path="res://Sprites/EpisodeFour/Coin/02.png" id="3_nqnvr"]
-[ext_resource type="Texture2D" uid="uid://dw2yurj03x71w" path="res://Sprites/EpisodeFour/Coin/03.png" id="4_48oh4"]
-[ext_resource type="Texture2D" uid="uid://d2bpcpdu032qt" path="res://Sprites/EpisodeFour/Coin/04.png" id="5_gx0ll"]
+[ext_resource type="Texture2D" uid="uid://dn52e3sicx4vq" path="res://GameAssets/Episode4/Coin/01.png" id="2_y1b75"]
+[ext_resource type="Texture2D" uid="uid://b33m82baxl237" path="res://GameAssets/Episode4/Coin/02.png" id="3_nqnvr"]
+[ext_resource type="Texture2D" uid="uid://dw2yurj03x71w" path="res://GameAssets/Episode4/Coin/03.png" id="4_48oh4"]
+[ext_resource type="Texture2D" uid="uid://d2bpcpdu032qt" path="res://GameAssets/Episode4/Coin/04.png" id="5_gx0ll"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ju7fc"]
 radius = 6.0

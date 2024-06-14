@@ -13,7 +13,7 @@ config_version=5
 config/name="2D_Platformer_GameDevKnight"
 run/main_scene="res://Scenes/WorldScene/level_one.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-config/icon="res://Game_Assets/icon.svg"
+config/icon="res://Icon/icon.svg"
 
 [autoload]
 

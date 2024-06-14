@@ -5,6 +5,7 @@ var speed = -60
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 var facing_right =  false
+var dead = false
 
 func _ready():
 	$AnimationPlayer.play("Run")
@@ -15,6 +16,9 @@ func _physics_process(delta):
 	
 	if !$RayCast2D.is_colliding() and is_on_floor():
 		flip()
+	if $RayCast2D2.is_colliding() and is_on_floor():
+		flip() 
+	
 	
 	movement()
 	
@@ -38,10 +42,15 @@ func flip():
 		speed = abs(speed) * -1
 	
 
-func death():
-	queue_free()
-
 func _on_hitbox_area_entered(area):
-	if area.get_parent() is Player:
+	if area.get_parent() is Player && !dead:
 		area.get_parent().death()
+
+func death():
+	dead = true
+	speed=0
+	$AnimationPlayer.play("Dead")
+
+
+
 
