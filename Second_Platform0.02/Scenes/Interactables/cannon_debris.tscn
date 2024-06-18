@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://c4j52nca7dkcg"]
+
+[ext_resource type="Texture2D" uid="uid://ctbjccj8c3838" path="res://GameAssets/Episode11/Cannon/Cannon Destroyed/1.png" id="1_2nvdx"]
+[ext_resource type="Texture2D" uid="uid://bqfy8d4jnxsnb" path="res://GameAssets/Episode11/Cannon/Cannon Destroyed/2.png" id="2_xyhua"]
+[ext_resource type="Texture2D" uid="uid://dmvtdsns88iml" path="res://GameAssets/Episode11/Cannon/Cannon Destroyed/3.png" id="3_alifr"]
+[ext_resource type="Texture2D" uid="uid://cw52j1y6vw05b" path="res://GameAssets/Episode11/Cannon/Cannon Destroyed/4.png" id="4_3ec7d"]
+
+[sub_resource type="Animation" id="Animation_wlm5l"]
+resource_name = "Crumble"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("1_2nvdx"), ExtResource("2_xyhua"), ExtResource("3_alifr"), ExtResource("4_3ec7d")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, 6)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qfj8d"]
+_data = {
+"Crumble": SubResource("Animation_wlm5l")
+}
+
+[node name="CannonDebris" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 6)
+texture = ExtResource("1_2nvdx")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../Sprite2D")
+libraries = {
+"": SubResource("AnimationLibrary_qfj8d")
+}

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dhevufswrqeun"
-path="res://.godot/imported/Idle Sword 04.png-bce9d5db363a961d895c1c230084a4da.ctex"
+path="res://.godot/imported/Idle Sword 04.png-d3580e815f5e553dc4e27f4590cd2c12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://GameAssets/Episode1/09-Idle Sword/Idle Sword 04.png"
-dest_files=["res://.godot/imported/Idle Sword 04.png-bce9d5db363a961d895c1c230084a4da.ctex"]
+source_file="res://GameAssets/Episode2/09-Idle Sword/Idle Sword 04.png"
+dest_files=["res://.godot/imported/Idle Sword 04.png-d3580e815f5e553dc4e27f4590cd2c12.ctex"]
 
 [params]
 

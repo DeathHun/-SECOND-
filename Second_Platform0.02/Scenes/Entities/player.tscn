@@ -1,15 +1,15 @@
 [gd_scene load_steps=28 format=3 uid="uid://d17ejxaqp08vu"]
 
 [ext_resource type="Script" path="res://Scripts/Entities/Player.gd" id="1_1uckq"]
-[ext_resource type="Texture2D" uid="uid://cwpc1e36a5ic7" path="res://GameAssets/Episode1/09-Idle Sword/Idle Sword 02.png" id="2_064b3"]
 [ext_resource type="Texture2D" uid="uid://dp4x53kqqagsb" path="res://GameAssets/Episode6/17-Attack 3/Attack 3 03.png" id="2_75ru0"]
+[ext_resource type="Texture2D" uid="uid://cfn68x1o7kr2v" path="res://GameAssets/Episode2/09-Idle Sword/Idle Sword 01.png" id="2_p8im3"]
 [ext_resource type="Texture2D" uid="uid://by0i43d2dsy8d" path="res://GameAssets/Episode2/11-Jump Sword/Jump Sword 01.png" id="2_pgq13"]
-[ext_resource type="Texture2D" uid="uid://cfn68x1o7kr2v" path="res://GameAssets/Episode1/09-Idle Sword/Idle Sword 01.png" id="3_tlpiu"]
-[ext_resource type="Texture2D" uid="uid://crbif3eu6yqpw" path="res://GameAssets/Episode1/09-Idle Sword/Idle Sword 03.png" id="4_ljr6f"]
-[ext_resource type="Texture2D" uid="uid://dhevufswrqeun" path="res://GameAssets/Episode1/09-Idle Sword/Idle Sword 04.png" id="5_pw32c"]
-[ext_resource type="Texture2D" uid="uid://bfftxq83ca6bn" path="res://GameAssets/Episode1/09-Idle Sword/Idle Sword 05.png" id="6_01ukl"]
+[ext_resource type="Texture2D" uid="uid://cwpc1e36a5ic7" path="res://GameAssets/Episode2/09-Idle Sword/Idle Sword 02.png" id="7_8yufp"]
 [ext_resource type="Texture2D" uid="uid://bt2ob6xe80gbl" path="res://GameAssets/Episode2/12-Fall Sword/Fall Sword 01.png" id="8_1rnpu"]
+[ext_resource type="Texture2D" uid="uid://crbif3eu6yqpw" path="res://GameAssets/Episode2/09-Idle Sword/Idle Sword 03.png" id="8_cjib0"]
 [ext_resource type="Texture2D" uid="uid://bga4goehyqjr6" path="res://GameAssets/Episode2/10-Run Sword/Run Sword 01.png" id="9_6j1q8"]
+[ext_resource type="Texture2D" uid="uid://dhevufswrqeun" path="res://GameAssets/Episode2/09-Idle Sword/Idle Sword 04.png" id="9_jng3x"]
+[ext_resource type="Texture2D" uid="uid://bfftxq83ca6bn" path="res://GameAssets/Episode2/09-Idle Sword/Idle Sword 05.png" id="10_t62hy"]
 [ext_resource type="Texture2D" uid="uid://blgiw058nd40h" path="res://GameAssets/Episode2/10-Run Sword/Run Sword 02.png" id="10_wetw8"]
 [ext_resource type="Texture2D" uid="uid://dmeavyukjeixj" path="res://GameAssets/Episode2/10-Run Sword/Run Sword 03.png" id="11_5ksm5"]
 [ext_resource type="Texture2D" uid="uid://b1jo8tsiwnyjx" path="res://GameAssets/Episode2/10-Run Sword/Run Sword 04.png" id="12_m221e"]
@@ -82,7 +82,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.0001, 0.0002, 0.0003, 0.0004, 0.0005, 0.0006, 0.0007, 0.0008, 0.15, 0.3, 0.45, 0.6),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [ExtResource("3_tlpiu"), ExtResource("3_tlpiu"), ExtResource("3_tlpiu"), ExtResource("3_tlpiu"), ExtResource("3_tlpiu"), ExtResource("3_tlpiu"), ExtResource("3_tlpiu"), ExtResource("3_tlpiu"), ExtResource("3_tlpiu"), ExtResource("2_064b3"), ExtResource("4_ljr6f"), ExtResource("5_pw32c"), ExtResource("6_01ukl")]
+"values": [ExtResource("2_p8im3"), ExtResource("2_p8im3"), ExtResource("2_p8im3"), ExtResource("2_p8im3"), ExtResource("2_p8im3"), ExtResource("2_p8im3"), ExtResource("2_p8im3"), ExtResource("2_p8im3"), ExtResource("2_p8im3"), ExtResource("7_8yufp"), ExtResource("8_cjib0"), ExtResource("9_jng3x"), ExtResource("10_t62hy")]
 }
 
 [sub_resource type="Animation" id="Animation_2psyl"]
@@ -128,7 +128,7 @@ _data = {
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tda7h"]
-radius = 14.6766
+radius = 12.2605
 
 [node name="Player" type="CharacterBody2D"]
 position = Vector2(0, -16)
@@ -139,7 +139,7 @@ script = ExtResource("1_1uckq")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 position = Vector2(0, 1.68962)
-texture = ExtResource("3_tlpiu")
+texture = ExtResource("2_p8im3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_t8lrd")
@@ -167,7 +167,7 @@ shape = SubResource("RectangleShape2D_t8lrd")
 monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(19.3867, 6.75847)
+position = Vector2(18.579, 6.75847)
 scale = Vector2(0.99628, 0.544708)
 shape = SubResource("CircleShape2D_tda7h")
 

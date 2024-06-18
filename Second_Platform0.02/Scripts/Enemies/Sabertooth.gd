@@ -7,7 +7,12 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var facing_right =  false
 var dead = false
 
+var health = 1
+var max_health = 1
+
+
 func _ready():
+	max_health = health
 	$AnimationPlayer.play("Run")
 
 func _physics_process(delta):
@@ -51,6 +56,10 @@ func death():
 	speed=0
 	$AnimationPlayer.play("Dead")
 
-
+func take_damage(damage_taken: int):
+	health -= damage_taken
+	
+	if health <= 0:
+		death()
 
 
