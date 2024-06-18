@@ -44,7 +44,7 @@ func flip():
 
 func _on_hitbox_area_entered(area):
 	if area.get_parent() is Player && !dead:
-		area.get_parent().death()
+		area.get_parent().take_damage(1)
 
 func death():
 	dead = true

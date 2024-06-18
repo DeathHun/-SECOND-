@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://wpqp8kcxtkvs"]
+
+[ext_resource type="Script" path="res://Scripts/Interactables/health_up.gd" id="1_fns7x"]
+[ext_resource type="Texture2D" uid="uid://ckp6ee6jdxp7l" path="res://GameAssets/Episode9/Heart.png" id="2_6kobg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jqogq"]
+
+[node name="HealthUp" type="Node2D"]
+script = ExtResource("1_fns7x")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_6kobg")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+scale = Vector2(0.542342, 0.542342)
+shape = SubResource("CircleShape2D_jqogq")
+
+[connection signal="area_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_area_entered"]

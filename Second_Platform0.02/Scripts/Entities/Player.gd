@@ -19,7 +19,15 @@ var wall_jump : bool = false
 var wall_normal : Vector2
 var jump_available : bool = true
 
+#heatlh bar
+var max_health = 2
+var health = 0
+var can_take_damage = true
+
+
+
 func _ready():
+	health = max_health
 	GameManager.player = self
 
 func _process(delta):
@@ -121,6 +129,19 @@ func update_animation():
 			animation.play("Jump")
 		if velocity.y > 0 and not is_on_floor():
 			animation.play("Fall")
+
+func take_damage(damage_amount: int):
+	if can_take_damage:
+		iframes()
+		health -= damage_amount
+		
+		if health <= 0:
+			death()
+
+func  iframes():
+	can_take_damage = false
+	await get_tree().create_timer(1).timeout
+	can_take_damage = true
 
 func death():
 	GameManager.respawn_player()
