@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c8sj5e6f0r1qa"]
 
-[ext_resource type="Texture2D" uid="uid://eblxvt5d6e74" path="res://GameAssets/Episode4/Spikes/Spikes.png" id="1_8csva"]
+[ext_resource type="Texture2D" uid="uid://eblxvt5d6e74" path="res://GameAssets/PirateGameAssets/Episode4/Spikes/Spikes.png" id="1_8csva"]
 [ext_resource type="Script" path="res://Scripts/Interactables/spikes.gd" id="1_iui0h"]
 
 [node name="Spikes" type="Node2D"]

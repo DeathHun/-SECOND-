@@ -1,16 +1,17 @@
-[gd_scene load_steps=18 format=3 uid="uid://ba5d8arqj7t3t"]
+[gd_scene load_steps=19 format=3 uid="uid://ba5d8arqj7t3t"]
 
 [ext_resource type="Script" path="res://Scripts/Interactables/canon.gd" id="1_02ou5"]
-[ext_resource type="Texture2D" uid="uid://1a7yc5ak4xvy" path="res://GameAssets/Episode11/Cannon/Cannon Fire/4.png" id="2_duohk"]
-[ext_resource type="Texture2D" uid="uid://c2wo3gvmudeff" path="res://GameAssets/Episode11/Cannon/Cannon Fire/1.png" id="3_heeow"]
-[ext_resource type="Texture2D" uid="uid://b5k66owmuegou" path="res://GameAssets/Episode11/Cannon/Cannon Fire/2.png" id="4_sr7cy"]
-[ext_resource type="Texture2D" uid="uid://rmqbbagkbi3u" path="res://GameAssets/Episode11/Cannon/Cannon Fire/3.png" id="5_anjwj"]
-[ext_resource type="Texture2D" uid="uid://b4va5q1mmp7fs" path="res://GameAssets/Episode11/Cannon/Cannon Fire/5.png" id="6_xtc6c"]
-[ext_resource type="Texture2D" uid="uid://ktxe04b2r7fo" path="res://GameAssets/Episode11/Cannon/Cannon Fire/6.png" id="7_5oowl"]
-[ext_resource type="Texture2D" uid="uid://dj06breq62eey" path="res://GameAssets/Episode11/Cannon/Cannon Hit/1.png" id="8_c5mqc"]
-[ext_resource type="Texture2D" uid="uid://ccv0jhtrt4i3g" path="res://GameAssets/Episode11/Cannon/Cannon Hit/2.png" id="9_5mkeb"]
-[ext_resource type="Texture2D" uid="uid://dsx1ehvnuimu8" path="res://GameAssets/Episode11/Cannon/Cannon Hit/3.png" id="10_aumrv"]
-[ext_resource type="Texture2D" uid="uid://cly1rybtq0jje" path="res://GameAssets/Episode11/Cannon/Cannon Hit/4.png" id="11_asgtd"]
+[ext_resource type="Texture2D" uid="uid://1a7yc5ak4xvy" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Fire/4.png" id="2_duohk"]
+[ext_resource type="Texture2D" uid="uid://c2wo3gvmudeff" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Fire/1.png" id="3_heeow"]
+[ext_resource type="Texture2D" uid="uid://b5k66owmuegou" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Fire/2.png" id="4_sr7cy"]
+[ext_resource type="Texture2D" uid="uid://rmqbbagkbi3u" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Fire/3.png" id="5_anjwj"]
+[ext_resource type="Texture2D" uid="uid://b4va5q1mmp7fs" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Fire/5.png" id="6_xtc6c"]
+[ext_resource type="Texture2D" uid="uid://ktxe04b2r7fo" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Fire/6.png" id="7_5oowl"]
+[ext_resource type="Texture2D" uid="uid://dj06breq62eey" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Hit/1.png" id="8_c5mqc"]
+[ext_resource type="Texture2D" uid="uid://ccv0jhtrt4i3g" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Hit/2.png" id="9_5mkeb"]
+[ext_resource type="Texture2D" uid="uid://dsx1ehvnuimu8" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Hit/3.png" id="10_aumrv"]
+[ext_resource type="Texture2D" uid="uid://cly1rybtq0jje" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Hit/4.png" id="11_asgtd"]
+[ext_resource type="PackedScene" uid="uid://rgucikb4mp1q" path="res://Scenes/UI/health_bar.tscn" id="12_edign"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_blp4x"]
 size = Vector2(26.7158, 23)
@@ -124,3 +125,7 @@ scale = Vector2(-1, 1)
 libraries = {
 "": SubResource("AnimationLibrary_iftxx")
 }
+
+[node name="HealthBar" parent="." instance=ExtResource("12_edign")]
+offset_top = -16.0
+offset_bottom = -16.0

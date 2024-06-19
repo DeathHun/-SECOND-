@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://deamoghtdusdw"]
 
 [ext_resource type="Script" path="res://Scripts/Interactables/moving_platform.gd" id="1_3jxsp"]
-[ext_resource type="Texture2D" uid="uid://cb3o4k8lm3gci" path="res://GameAssets/Episode1/Terrain/Platform.png" id="1_rfyx2"]
+[ext_resource type="Texture2D" uid="uid://cb3o4k8lm3gci" path="res://GameAssets/PirateGameAssets/Episode3/Terrain/Platform.png" id="1_rfyx2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_syn3f"]
 size = Vector2(97, 32)

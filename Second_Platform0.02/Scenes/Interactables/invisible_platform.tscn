@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://frn2fjynx1px"]
 
 [ext_resource type="Script" path="res://Scripts/Interactables/InvisiblePlatform.gd" id="1_y6kh8"]
-[ext_resource type="Texture2D" uid="uid://mkv52sg10wpq" path="res://GameAssets/Episode10/SingleTile.png" id="2_72tk0"]
+[ext_resource type="Texture2D" uid="uid://mkv52sg10wpq" path="res://GameAssets/PirateGameAssets/Episode10/SingleTile.png" id="2_72tk0"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_va6i7"]
 size = Vector2(20.4164, 22.9494)

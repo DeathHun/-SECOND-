@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://wpqp8kcxtkvs"]
 
 [ext_resource type="Script" path="res://Scripts/Interactables/health_up.gd" id="1_fns7x"]
-[ext_resource type="Texture2D" uid="uid://ckp6ee6jdxp7l" path="res://GameAssets/Episode9/Heart.png" id="2_6kobg"]
+[ext_resource type="Texture2D" uid="uid://ckp6ee6jdxp7l" path="res://GameAssets/PirateGameAssets/Episode9/Heart.png" id="2_6kobg"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jqogq"]
 

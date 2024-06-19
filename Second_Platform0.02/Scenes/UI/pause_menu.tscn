@@ -1,0 +1,72 @@
+[gd_scene load_steps=3 format=3 uid="uid://dlpwfe5snc6hu"]
+
+[ext_resource type="Theme" uid="uid://ccog3jsgfhauc" path="res://Resources/Default(1).tres" id="1_0jrae"]
+[ext_resource type="Script" path="res://Scripts/UI/pause_menu.gd" id="2_fhdqh"]
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -400.0
+offset_right = -750.0
+offset_bottom = -400.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_0jrae")
+script = ExtResource("2_fhdqh")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+offset_left = 550.0
+offset_top = 92.0
+offset_right = 577.0
+offset_bottom = 186.0
+scale = Vector2(18.5399, 6.64032)
+theme = ExtResource("1_0jrae")
+
+[node name="Resume" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 7.389
+offset_top = 19.1256
+offset_right = 66.389
+offset_bottom = 59.1256
+scale = Vector2(0.2047, 0.341361)
+text = " Resume"
+
+[node name="Restart" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 7.389
+offset_top = 34.1256
+offset_right = 66.389
+offset_bottom = 74.1256
+scale = Vector2(0.2047, 0.341361)
+text = " Restart
+"
+
+[node name="Map" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 7.389
+offset_top = 49.1256
+offset_right = 66.389
+offset_bottom = 89.1256
+scale = Vector2(0.2047, 0.341361)
+text = "Map
+"
+
+[node name="Quit" type="Button" parent="Label"]
+layout_mode = 0
+offset_left = 7.389
+offset_top = 64.1256
+offset_right = 66.389
+offset_bottom = 104.126
+scale = Vector2(0.2047, 0.341361)
+text = "Quit"
+
+[connection signal="pressed" from="Label/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Label/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Label/Map" to="." method="_on_map_pressed"]
+[connection signal="pressed" from="Label/Quit" to="." method="_on_quit_pressed"]

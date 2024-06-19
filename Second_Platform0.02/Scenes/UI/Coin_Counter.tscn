@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://q61e8c8fd65m"]
+
+[ext_resource type="Theme" uid="uid://ccog3jsgfhauc" path="res://Resources/Default(1).tres" id="1_qwuxt"]
+[ext_resource type="Script" path="res://Scripts/UI/UiManager.gd" id="2_1gaqt"]
+[ext_resource type="Texture2D" uid="uid://cbbwq1rvnp8im" path="res://GameAssets/PirateGameAssets/Episode16/Coin.png" id="3_4d61j"]
+
+[node name="Coin_Counter" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = ExtResource("1_qwuxt")
+
+[node name="UiManager" type="CanvasLayer" parent="."]
+layer = 3
+script = ExtResource("2_1gaqt")
+
+[node name="CoinIcon" type="TextureRect" parent="UiManager"]
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 23.0
+offset_bottom = 19.0
+texture = ExtResource("3_4d61j")
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinDisplay" type="Label" parent="UiManager"]
+offset_left = 22.0
+offset_top = -4.0
+offset_right = 62.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.760784, 0.372549, 0.384314, 1)
+theme_override_font_sizes/font_size = 18
+text = "0"
+metadata/_edit_use_anchors_ = true

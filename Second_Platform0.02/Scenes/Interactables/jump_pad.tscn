@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://dd5vdfvs7bgld"]
 
 [ext_resource type="Script" path="res://Scripts/Interactables/jump_pad.gd" id="1_327kf"]
-[ext_resource type="Texture2D" uid="uid://xcraee2rvfkx" path="res://GameAssets/Episode8/JumpPad.png" id="2_o5f5x"]
+[ext_resource type="Texture2D" uid="uid://xcraee2rvfkx" path="res://GameAssets/PirateGameAssets/Episode8/JumpPad.png" id="2_o5f5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8ryni"]
 size = Vector2(14.5, 9.5)

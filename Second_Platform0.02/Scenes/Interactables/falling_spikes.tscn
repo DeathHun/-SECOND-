@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bcsedquosnj3k"]
 
 [ext_resource type="Script" path="res://Scripts/Interactables/falling_spikes.gd" id="1_gpl80"]
-[ext_resource type="Texture2D" uid="uid://h7q6vkjbam4p" path="res://GameAssets/Episode8/Spikes.png" id="1_sisy3"]
+[ext_resource type="Texture2D" uid="uid://h7q6vkjbam4p" path="res://GameAssets/PirateGameAssets/Episode8/Spikes.png" id="1_sisy3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qyto0"]
 size = Vector2(34, 123)

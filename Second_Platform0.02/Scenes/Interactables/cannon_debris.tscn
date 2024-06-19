@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=3 uid="uid://c4j52nca7dkcg"]
 
-[ext_resource type="Texture2D" uid="uid://ctbjccj8c3838" path="res://GameAssets/Episode11/Cannon/Cannon Destroyed/1.png" id="1_2nvdx"]
-[ext_resource type="Texture2D" uid="uid://bqfy8d4jnxsnb" path="res://GameAssets/Episode11/Cannon/Cannon Destroyed/2.png" id="2_xyhua"]
-[ext_resource type="Texture2D" uid="uid://dmvtdsns88iml" path="res://GameAssets/Episode11/Cannon/Cannon Destroyed/3.png" id="3_alifr"]
-[ext_resource type="Texture2D" uid="uid://cw52j1y6vw05b" path="res://GameAssets/Episode11/Cannon/Cannon Destroyed/4.png" id="4_3ec7d"]
+[ext_resource type="Texture2D" uid="uid://ctbjccj8c3838" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Destroyed/1.png" id="1_2nvdx"]
+[ext_resource type="Texture2D" uid="uid://bqfy8d4jnxsnb" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Destroyed/2.png" id="2_xyhua"]
+[ext_resource type="Texture2D" uid="uid://dmvtdsns88iml" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Destroyed/3.png" id="3_alifr"]
+[ext_resource type="Texture2D" uid="uid://cw52j1y6vw05b" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Destroyed/4.png" id="4_3ec7d"]
 
 [sub_resource type="Animation" id="Animation_wlm5l"]
 resource_name = "Crumble"

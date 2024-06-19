@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://c3u1xn7xn11fy"]
 
 [ext_resource type="Script" path="res://Scripts/Interactables/CanonBall.gd" id="1_2rcp7"]
-[ext_resource type="Texture2D" uid="uid://cwdclrlqjfs2a" path="res://GameAssets/Episode11/Cannon/Cannon Ball Idle/1.png" id="2_1w6bs"]
+[ext_resource type="Texture2D" uid="uid://cwdclrlqjfs2a" path="res://GameAssets/PirateGameAssets/Episode11/Cannon/Cannon Ball Idle/1.png" id="2_1w6bs"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_oaqc1"]
 radius = 8.0

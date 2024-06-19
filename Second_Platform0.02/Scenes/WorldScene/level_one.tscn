@@ -1,20 +1,20 @@
 [gd_scene load_steps=20 format=3 uid="uid://byl1drg3qhgfg"]
 
-[ext_resource type="Texture2D" uid="uid://cym5u1f0nctbl" path="res://GameAssets/Episode4/Spritesheet/BG Image.png" id="1_wcbnj"]
+[ext_resource type="Texture2D" uid="uid://cym5u1f0nctbl" path="res://GameAssets/PirateGameAssets/Episode4/Spritesheet/BG Image.png" id="1_wcbnj"]
 [ext_resource type="PackedScene" uid="uid://d17ejxaqp08vu" path="res://Scenes/Entities/player.tscn" id="2_8nik0"]
-[ext_resource type="Texture2D" uid="uid://3jem7smeqs5t" path="res://GameAssets/Episode3/Terrain/Terrain (32x32).png" id="2_d0h08"]
-[ext_resource type="Texture2D" uid="uid://bvruk48e2mkcy" path="res://GameAssets/Episode4/Spritesheet/Spritesheet-export.png" id="4_x65sa"]
+[ext_resource type="Texture2D" uid="uid://3jem7smeqs5t" path="res://GameAssets/PirateGameAssets/Episode3/Terrain/Terrain (32x32).png" id="2_d0h08"]
+[ext_resource type="Texture2D" uid="uid://bvruk48e2mkcy" path="res://GameAssets/PirateGameAssets/Episode4/Spritesheet/Spritesheet-export.png" id="4_x65sa"]
 [ext_resource type="PackedScene" uid="uid://cjvy8mmkc3brs" path="res://Scenes/Interactables/checkpoint.tscn" id="5_vw0d1"]
 [ext_resource type="PackedScene" uid="uid://c8sj5e6f0r1qa" path="res://Scenes/Interactables/spikes.tscn" id="6_6v2bp"]
 [ext_resource type="PackedScene" uid="uid://q4786ho3pop8" path="res://Scenes/Interactables/coin.tscn" id="7_1ckyl"]
-[ext_resource type="Texture2D" uid="uid://cbbwq1rvnp8im" path="res://GameAssets/Episode16/Coin.png" id="8_apsqy"]
-[ext_resource type="Script" path="res://Scripts/UI/UiManager.gd" id="8_w4nnm"]
 [ext_resource type="PackedScene" uid="uid://b14q5wl5f5twu" path="res://Scenes/Entities/saber_tooth_enemy.tscn" id="10_bhy64"]
 [ext_resource type="PackedScene" uid="uid://bcsedquosnj3k" path="res://Scenes/Interactables/falling_spikes.tscn" id="11_58opb"]
 [ext_resource type="PackedScene" uid="uid://dd5vdfvs7bgld" path="res://Scenes/Interactables/jump_pad.tscn" id="12_5btnp"]
 [ext_resource type="PackedScene" uid="uid://wpqp8kcxtkvs" path="res://Scenes/Interactables/health_up.tscn" id="13_4uiys"]
 [ext_resource type="PackedScene" uid="uid://frn2fjynx1px" path="res://Scenes/Interactables/invisible_platform.tscn" id="14_sysw5"]
+[ext_resource type="PackedScene" uid="uid://dlpwfe5snc6hu" path="res://Scenes/UI/pause_menu.tscn" id="15_1jm07"]
 [ext_resource type="PackedScene" uid="uid://deamoghtdusdw" path="res://Scenes/Interactables/moving_platform.tscn" id="15_dqmgd"]
+[ext_resource type="PackedScene" uid="uid://q61e8c8fd65m" path="res://Scenes/UI/Coin_Counter.tscn" id="16_8748q"]
 [ext_resource type="PackedScene" uid="uid://ba5d8arqj7t3t" path="res://Scenes/Interactables/canon.tscn" id="16_wxlnu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lyt7b"]
@@ -1179,27 +1179,6 @@ sources/1 = SubResource("TileSetAtlasSource_bul0i")
 
 [node name="LevelOne" type="Node2D"]
 
-[node name="UiManager" type="CanvasLayer" parent="."]
-layer = 3
-script = ExtResource("8_w4nnm")
-
-[node name="CoinIcon" type="TextureRect" parent="UiManager"]
-offset_left = 3.0
-offset_top = -1.0
-offset_right = 23.0
-offset_bottom = 19.0
-texture = ExtResource("8_apsqy")
-metadata/_edit_use_anchors_ = true
-
-[node name="CoinDisplay" type="Label" parent="UiManager"]
-offset_left = 22.0
-offset_top = -4.0
-offset_right = 62.0
-offset_bottom = 30.0
-theme_override_colors/font_color = Color(0.760784, 0.372549, 0.384314, 1)
-theme_override_font_sizes/font_size = 18
-text = "0"
-
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -5014.0
 offset_top = -1697.0
@@ -1369,6 +1348,9 @@ position = Vector2(1456, 286)
 [node name="Canon" parent="." instance=ExtResource("16_wxlnu")]
 position = Vector2(570, 148)
 
-[node name="Canon2" parent="." instance=ExtResource("16_wxlnu")]
-position = Vector2(73, 199)
-scale = Vector2(-1, 1)
+[node name="UI_Handler" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="UI_Handler" instance=ExtResource("15_1jm07")]
+visible = false
+
+[node name="Coin_Counter" parent="UI_Handler" instance=ExtResource("16_8748q")]
