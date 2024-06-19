@@ -40,6 +40,7 @@ func _physics_process(delta):
 	if Input.is_action_pressed("down") && is_on_floor():
 		position.y += 5
 	
+	
 	add_gravity(delta)
 	jump_action()
 	movement(delta)

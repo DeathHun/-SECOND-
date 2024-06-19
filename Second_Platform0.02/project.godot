@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="2D_Platformer_GameDevKnight"
-run/main_scene="res://Scenes/WorldScene/level_one.tscn"
+run/main_scene="res://Scenes/WorldScene/TestLevel.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://Icon/icon.svg"
 

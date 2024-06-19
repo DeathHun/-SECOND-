@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://clg6jorjkh54p"]
+
+[ext_resource type="Script" path="res://Scripts/Interactables/Sign.gd" id="1_2l6s4"]
+[ext_resource type="Texture2D" uid="uid://dipcjaxm2wla7" path="res://GameAssets/Sign Posts/03.png" id="2_nqlcm"]
+[ext_resource type="FontFile" uid="uid://cspk4w5i1mgge" path="res://GameAssets/GUI_Elements/MinimalPixel v2.ttf" id="3_us75w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2h5hg"]
+size = Vector2(40, 42)
+
+[sub_resource type="Animation" id="Animation_o8os3"]
+resource_name = "Fade In"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1yqsj"]
+_data = {
+"Fade In": SubResource("Animation_o8os3")
+}
+
+[node name="Sign" type="Node2D"]
+script = ExtResource("1_2l6s4")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(42, -31)
+scale = Vector2(1.6415, 1.6415)
+texture = ExtResource("2_nqlcm")
+
+[node name="Label" type="Label" parent="Sprite2D"]
+offset_left = -14.6208
+offset_top = -10.9656
+offset_right = 66.3792
+offset_bottom = 6.03442
+scale = Vector2(0.701566, 0.701566)
+theme_override_fonts/font = ExtResource("3_us75w")
+theme_override_font_sizes/font_size = 7
+text = "Follow The 
+Right Path"
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(-31, -16)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(76, -11)
+scale = Vector2(2.17493, 1.69187)
+shape = SubResource("RectangleShape2D_2h5hg")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_1yqsj")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

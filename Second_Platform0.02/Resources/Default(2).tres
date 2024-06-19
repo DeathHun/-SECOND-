@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://bnolvcrww5d68"]
+
+[ext_resource type="Texture2D" uid="uid://cyt5jy77mmvos" path="res://GameAssets/GUI_Elements/GUI.png" id="1_w0ovd"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0ulou"]
+texture = ExtResource("1_w0ovd")
+region_rect = Rect2(112, 256, 80, 48)
+
+[resource]
+Label/styles/normal = SubResource("StyleBoxTexture_0ulou")

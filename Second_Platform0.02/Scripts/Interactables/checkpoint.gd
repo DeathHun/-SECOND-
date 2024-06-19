@@ -3,6 +3,8 @@ class_name Checkpoint
 
 
 @export var spawnpoint : bool = false
+@export var win_condition = false
+
 
 var activated : bool = false
 
@@ -16,6 +18,8 @@ func _ready():
 
 
 func activate():
+	if win_condition:
+		GameManager.win()
 	GameManager.current_checkpoint = self
 	activated = true
 	$AnimationPlayer.play("Activated")

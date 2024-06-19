@@ -8,6 +8,7 @@ var player : Player
 
 var paused = false
 var pause_menu
+var win_screen
 
 func respawn_player():
 	player.health = player.max_health
@@ -17,6 +18,9 @@ func respawn_player():
 func gain_coin(coins_gained : int):
 	coins += coins_gained
 	emit_signal("gained_coins", coins_gained)
+
+func win():
+	win_screen.visible = true
 
 func pause_play():
 	paused = !paused
@@ -32,7 +36,7 @@ func restart():
 	get_tree().reload_current_scene()
 
 func load_world():
-	pass
+	get_tree().change_scene_to_file("res://Scenes/WorldScene/level_two.tscn")
 
 func quit():
 	get_tree().quit()

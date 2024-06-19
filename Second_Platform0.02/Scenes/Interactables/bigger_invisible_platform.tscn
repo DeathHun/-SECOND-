@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://b2hsej3xlf81p"]
+
+[ext_resource type="Texture2D" uid="uid://cb3o4k8lm3gci" path="res://GameAssets/PirateGameAssets/Episode1/Terrain/Platform.png" id="1_5nw7q"]
+[ext_resource type="Script" path="res://Scripts/Interactables/bigger_invisible_platform.gd" id="1_yd21j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ypk0"]
+size = Vector2(122.499, 44.4644)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f5nt1"]
+size = Vector2(21.8761, 10.3203)
+
+[sub_resource type="Animation" id="Animation_n8otf"]
+resource_name = "Fade In"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_2lw4a"]
+_data = {
+"Fade In": SubResource("Animation_n8otf")
+}
+
+[node name="BiggerInvisible Platform" type="StaticBody2D"]
+script = ExtResource("1_yd21j")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+texture = ExtResource("1_5nw7q")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.8147e-06, 0.5)
+scale = Vector2(0.783683, 0.697187)
+shape = SubResource("RectangleShape2D_1ypk0")
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2(0, -32)
+scale = Vector2(5.3881, -5.80948)
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.115138, -5.83985)
+shape = SubResource("RectangleShape2D_f5nt1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_2lw4a")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

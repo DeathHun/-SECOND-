@@ -1,24 +1,27 @@
-[gd_scene load_steps=20 format=3 uid="uid://byl1drg3qhgfg"]
+[gd_scene load_steps=33 format=3 uid="uid://byl1drg3qhgfg"]
 
-[ext_resource type="Texture2D" uid="uid://cym5u1f0nctbl" path="res://GameAssets/PirateGameAssets/Episode4/Spritesheet/BG Image.png" id="1_wcbnj"]
-[ext_resource type="PackedScene" uid="uid://d17ejxaqp08vu" path="res://Scenes/Entities/player.tscn" id="2_8nik0"]
-[ext_resource type="Texture2D" uid="uid://3jem7smeqs5t" path="res://GameAssets/PirateGameAssets/Episode3/Terrain/Terrain (32x32).png" id="2_d0h08"]
-[ext_resource type="Texture2D" uid="uid://bvruk48e2mkcy" path="res://GameAssets/PirateGameAssets/Episode4/Spritesheet/Spritesheet-export.png" id="4_x65sa"]
-[ext_resource type="PackedScene" uid="uid://cjvy8mmkc3brs" path="res://Scenes/Interactables/checkpoint.tscn" id="5_vw0d1"]
-[ext_resource type="PackedScene" uid="uid://c8sj5e6f0r1qa" path="res://Scenes/Interactables/spikes.tscn" id="6_6v2bp"]
-[ext_resource type="PackedScene" uid="uid://q4786ho3pop8" path="res://Scenes/Interactables/coin.tscn" id="7_1ckyl"]
-[ext_resource type="PackedScene" uid="uid://b14q5wl5f5twu" path="res://Scenes/Entities/saber_tooth_enemy.tscn" id="10_bhy64"]
-[ext_resource type="PackedScene" uid="uid://bcsedquosnj3k" path="res://Scenes/Interactables/falling_spikes.tscn" id="11_58opb"]
-[ext_resource type="PackedScene" uid="uid://dd5vdfvs7bgld" path="res://Scenes/Interactables/jump_pad.tscn" id="12_5btnp"]
-[ext_resource type="PackedScene" uid="uid://wpqp8kcxtkvs" path="res://Scenes/Interactables/health_up.tscn" id="13_4uiys"]
-[ext_resource type="PackedScene" uid="uid://frn2fjynx1px" path="res://Scenes/Interactables/invisible_platform.tscn" id="14_sysw5"]
-[ext_resource type="PackedScene" uid="uid://dlpwfe5snc6hu" path="res://Scenes/UI/pause_menu.tscn" id="15_1jm07"]
-[ext_resource type="PackedScene" uid="uid://deamoghtdusdw" path="res://Scenes/Interactables/moving_platform.tscn" id="15_dqmgd"]
-[ext_resource type="PackedScene" uid="uid://q61e8c8fd65m" path="res://Scenes/UI/Coin_Counter.tscn" id="16_8748q"]
-[ext_resource type="PackedScene" uid="uid://ba5d8arqj7t3t" path="res://Scenes/Interactables/canon.tscn" id="16_wxlnu"]
+[ext_resource type="Texture2D" uid="uid://cym5u1f0nctbl" path="res://GameAssets/PirateGameAssets/Episode4/Spritesheet/BG Image.png" id="1_5cw5n"]
+[ext_resource type="PackedScene" uid="uid://wpqp8kcxtkvs" path="res://Scenes/Interactables/health_up.tscn" id="2_vh4kf"]
+[ext_resource type="PackedScene" uid="uid://b14q5wl5f5twu" path="res://Scenes/Entities/saber_tooth_enemy.tscn" id="3_k7da0"]
+[ext_resource type="PackedScene" uid="uid://dd5vdfvs7bgld" path="res://Scenes/Interactables/jump_pad.tscn" id="4_26lgi"]
+[ext_resource type="PackedScene" uid="uid://cjvy8mmkc3brs" path="res://Scenes/Interactables/checkpoint.tscn" id="5_4h6fl"]
+[ext_resource type="PackedScene" uid="uid://c8sj5e6f0r1qa" path="res://Scenes/Interactables/spikes.tscn" id="6_cqlup"]
+[ext_resource type="PackedScene" uid="uid://q4786ho3pop8" path="res://Scenes/Interactables/coin.tscn" id="7_1cjv2"]
+[ext_resource type="PackedScene" uid="uid://bcsedquosnj3k" path="res://Scenes/Interactables/falling_spikes.tscn" id="8_tog74"]
+[ext_resource type="PackedScene" uid="uid://frn2fjynx1px" path="res://Scenes/Interactables/invisible_platform.tscn" id="9_6sdyj"]
+[ext_resource type="PackedScene" uid="uid://d17ejxaqp08vu" path="res://Scenes/Entities/player.tscn" id="10_wo6ni"]
+[ext_resource type="Texture2D" uid="uid://3jem7smeqs5t" path="res://GameAssets/PirateGameAssets/Episode3/Terrain/Terrain (32x32).png" id="11_jkpoj"]
+[ext_resource type="Texture2D" uid="uid://bvruk48e2mkcy" path="res://GameAssets/PirateGameAssets/Episode4/Spritesheet/Spritesheet-export.png" id="12_73iem"]
+[ext_resource type="PackedScene" uid="uid://deamoghtdusdw" path="res://Scenes/Interactables/moving_platform.tscn" id="13_6gti7"]
+[ext_resource type="PackedScene" uid="uid://ba5d8arqj7t3t" path="res://Scenes/Interactables/canon.tscn" id="14_3vfnp"]
+[ext_resource type="PackedScene" uid="uid://q61e8c8fd65m" path="res://Scenes/UI/Coin_Counter.tscn" id="15_aknvi"]
+[ext_resource type="Theme" uid="uid://ccog3jsgfhauc" path="res://Resources/Default(1).tres" id="16_sxevr"]
+[ext_resource type="Script" path="res://Scripts/UI/Pausemenu(LevelVr).gd" id="17_pghb1"]
+[ext_resource type="Texture2D" uid="uid://cyt5jy77mmvos" path="res://GameAssets/GUI_Elements/GUI.png" id="18_eha6s"]
+[ext_resource type="FontFile" uid="uid://cspk4w5i1mgge" path="res://GameAssets/GUI_Elements/MinimalPixel v2.ttf" id="19_u1ljf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lyt7b"]
-texture = ExtResource("2_d0h08")
+texture = ExtResource("11_jkpoj")
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
@@ -773,7 +776,7 @@ texture = ExtResource("2_d0h08")
 0:5/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, 1.375, 8, -2.375, 5.5, -4.5, 2.5, -6.75, -1.625, -8, -5.375)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bul0i"]
-texture = ExtResource("4_x65sa")
+texture = ExtResource("12_73iem")
 1:0/0 = 0
 1:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 1:0/0/physics_layer_0/angular_velocity = 0.0
@@ -1177,6 +1180,101 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_lyt7b")
 sources/1 = SubResource("TileSetAtlasSource_bul0i")
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3opgr"]
+texture = ExtResource("18_eha6s")
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_638c0"]
+texture = ExtResource("18_eha6s")
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qo5yq"]
+texture = ExtResource("18_eha6s")
+region_rect = Rect2(113, 98, 30, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8yhna"]
+texture = ExtResource("18_eha6s")
+region_rect = Rect2(113, 81, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mttxu"]
+texture = ExtResource("18_eha6s")
+region_rect = Rect2(0, 96, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_821v8"]
+texture = ExtResource("18_eha6s")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+region_rect = Rect2(135, 20, 52, 7)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q8tb5"]
+texture = ExtResource("18_eha6s")
+region_rect = Rect2(72, 22, 49, 3)
+
+[sub_resource type="Theme" id="Theme_y1bqc"]
+default_font = ExtResource("19_u1ljf")
+Button/font_sizes/font_size = 14
+Button/styles/focus = SubResource("StyleBoxTexture_3opgr")
+Button/styles/hover = SubResource("StyleBoxTexture_638c0")
+Button/styles/normal = SubResource("StyleBoxTexture_qo5yq")
+Button/styles/pressed = SubResource("StyleBoxTexture_8yhna")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("19_u1ljf")
+Label/styles/normal = SubResource("StyleBoxTexture_mttxu")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_821v8")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_q8tb5")
+
+[sub_resource type="Theme" id="Theme_dcec0"]
+default_font = ExtResource("19_u1ljf")
+Button/font_sizes/font_size = 14
+Button/styles/focus = SubResource("StyleBoxTexture_3opgr")
+Button/styles/hover = SubResource("StyleBoxTexture_638c0")
+Button/styles/normal = SubResource("StyleBoxTexture_qo5yq")
+Button/styles/pressed = SubResource("StyleBoxTexture_8yhna")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("19_u1ljf")
+Label/styles/normal = SubResource("StyleBoxTexture_mttxu")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_821v8")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_q8tb5")
+
+[sub_resource type="Theme" id="Theme_denfu"]
+default_font = ExtResource("19_u1ljf")
+Button/font_sizes/font_size = 14
+Button/styles/focus = SubResource("StyleBoxTexture_3opgr")
+Button/styles/hover = SubResource("StyleBoxTexture_638c0")
+Button/styles/normal = SubResource("StyleBoxTexture_qo5yq")
+Button/styles/pressed = SubResource("StyleBoxTexture_8yhna")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("19_u1ljf")
+Label/styles/normal = SubResource("StyleBoxTexture_mttxu")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_821v8")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_q8tb5")
+
 [node name="LevelOne" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -1185,151 +1283,155 @@ offset_top = -1697.0
 offset_right = -1861.0
 offset_bottom = -646.0
 scale = Vector2(3.36928, 3.27211)
-texture = ExtResource("1_wcbnj")
+texture = ExtResource("1_5cw5n")
 
 [node name="HealthUpHolder" type="Node2D" parent="."]
 
-[node name="HealthUp" parent="HealthUpHolder" instance=ExtResource("13_4uiys")]
+[node name="HealthUp" parent="HealthUpHolder" instance=ExtResource("2_vh4kf")]
 position = Vector2(50, 330)
 
 [node name="SaberTooth_Holder" type="Node2D" parent="."]
 
-[node name="SaberTooth_Enemy" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy" parent="SaberTooth_Holder" instance=ExtResource("3_k7da0")]
 position = Vector2(429, 448)
 
-[node name="SaberTooth_Enemy2" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy2" parent="SaberTooth_Holder" instance=ExtResource("3_k7da0")]
 position = Vector2(832, 479)
 
-[node name="SaberTooth_Enemy3" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy3" parent="SaberTooth_Holder" instance=ExtResource("3_k7da0")]
 position = Vector2(425, 193)
 
-[node name="SaberTooth_Enemy4" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy4" parent="SaberTooth_Holder" instance=ExtResource("3_k7da0")]
 position = Vector2(758, 208)
 
-[node name="SaberTooth_Enemy5" parent="SaberTooth_Holder" instance=ExtResource("10_bhy64")]
+[node name="SaberTooth_Enemy5" parent="SaberTooth_Holder" instance=ExtResource("3_k7da0")]
 position = Vector2(1167, 192)
 
 [node name="JumpPad Holder" type="Node2D" parent="."]
 
-[node name="Jump_Pad" parent="JumpPad Holder" instance=ExtResource("12_5btnp")]
+[node name="Jump_Pad" parent="JumpPad Holder" instance=ExtResource("4_26lgi")]
 position = Vector2(588, 437)
 
 [node name="Checkpoinr_Holder" type="Node2D" parent="."]
 
-[node name="Checkpoint" parent="Checkpoinr_Holder" instance=ExtResource("5_vw0d1")]
+[node name="Checkpoint" parent="Checkpoinr_Holder" instance=ExtResource("5_4h6fl")]
 position = Vector2(125, 336)
 spawnpoint = true
 
-[node name="Checkpoint2" parent="Checkpoinr_Holder" instance=ExtResource("5_vw0d1")]
+[node name="Checkpoint2" parent="Checkpoinr_Holder" instance=ExtResource("5_4h6fl")]
 position = Vector2(1326, 225)
+
+[node name="Checkpoint3" parent="Checkpoinr_Holder" instance=ExtResource("5_4h6fl")]
+position = Vector2(1122, 401)
+win_condition = true
 
 [node name="Spike_Holder" type="Node2D" parent="."]
 
-[node name="Spikes" parent="Spike_Holder" instance=ExtResource("6_6v2bp")]
+[node name="Spikes" parent="Spike_Holder" instance=ExtResource("6_cqlup")]
 position = Vector2(287, 544)
 scale = Vector2(1.02543, 0.959615)
 
-[node name="Spikes2" parent="Spike_Holder" instance=ExtResource("6_6v2bp")]
+[node name="Spikes2" parent="Spike_Holder" instance=ExtResource("6_cqlup")]
 position = Vector2(960, 464)
 
-[node name="Spikes3" parent="Spike_Holder" instance=ExtResource("6_6v2bp")]
+[node name="Spikes3" parent="Spike_Holder" instance=ExtResource("6_cqlup")]
 position = Vector2(848, 272)
 
-[node name="Spikes4" parent="Spike_Holder" instance=ExtResource("6_6v2bp")]
+[node name="Spikes4" parent="Spike_Holder" instance=ExtResource("6_cqlup")]
 position = Vector2(992, 224)
 
-[node name="Spikes5" parent="Spike_Holder" instance=ExtResource("6_6v2bp")]
+[node name="Spikes5" parent="Spike_Holder" instance=ExtResource("6_cqlup")]
 position = Vector2(1247, 224)
 
-[node name="Spikes6" parent="Spike_Holder" instance=ExtResource("6_6v2bp")]
+[node name="Spikes6" parent="Spike_Holder" instance=ExtResource("6_cqlup")]
 position = Vector2(352, 545)
 
 [node name="Coin_Holder" type="Node2D" parent="."]
 position = Vector2(639, 516)
 
-[node name="Coin" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(-319, -52)
 
-[node name="Coin2" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin2" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(276, -100)
 
-[node name="Coin3" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin3" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(547, -79)
 
-[node name="Coin4" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin4" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(527, -79)
 
-[node name="Coin5" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin5" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(506, -79)
 
-[node name="Coin6" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin6" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(-111, -81)
 
-[node name="Coin7" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin7" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(-130, -81)
 
-[node name="Coin8" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin8" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(-149, -81)
 
-[node name="Coin9" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin9" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(112, -117)
 
-[node name="Coin10" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin10" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(91, -117)
 
-[node name="Coin11" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin11" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(-336, -256)
 
-[node name="Coin12" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin12" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(-316, -256)
 
-[node name="Coin13" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin13" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(322, -121)
 
-[node name="Coin14" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin14" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(-118, -367)
 
-[node name="Coin15" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin15" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(182, -324)
 
-[node name="Coin16" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin16" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(18, -322)
 
-[node name="Coin17" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin17" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(39, -322)
 
-[node name="Coin18" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin18" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(310, -307)
 
-[node name="Coin19" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin19" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(292, -307)
 
-[node name="Coin20" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin20" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(578, -340)
 
-[node name="Coin21" parent="Coin_Holder" instance=ExtResource("7_1ckyl")]
+[node name="Coin21" parent="Coin_Holder" instance=ExtResource("7_1cjv2")]
 position = Vector2(558, -340)
 
 [node name="Fallingspike_Holder" type="Node2D" parent="."]
 
-[node name="FallingSpikes" parent="Fallingspike_Holder" instance=ExtResource("11_58opb")]
+[node name="FallingSpikes" parent="Fallingspike_Holder" instance=ExtResource("8_tog74")]
 position = Vector2(430, 301)
 
-[node name="FallingSpikes2" parent="Fallingspike_Holder" instance=ExtResource("11_58opb")]
+[node name="FallingSpikes2" parent="Fallingspike_Holder" instance=ExtResource("8_tog74")]
 position = Vector2(1111, 272)
 
-[node name="FallingSpikes3" parent="Fallingspike_Holder" instance=ExtResource("11_58opb")]
+[node name="FallingSpikes3" parent="Fallingspike_Holder" instance=ExtResource("8_tog74")]
 position = Vector2(774, 319)
 
-[node name="FallingSpikes4" parent="Fallingspike_Holder" instance=ExtResource("11_58opb")]
+[node name="FallingSpikes4" parent="Fallingspike_Holder" instance=ExtResource("8_tog74")]
 position = Vector2(464, 303)
 
 [node name="InvisiblePlatform Holder" type="Node2D" parent="."]
 
-[node name="InvisiblePlatform" parent="InvisiblePlatform Holder" instance=ExtResource("14_sysw5")]
+[node name="InvisiblePlatform" parent="InvisiblePlatform Holder" instance=ExtResource("9_6sdyj")]
 position = Vector2(1294, 419)
 
-[node name="Player" parent="." instance=ExtResource("2_8nik0")]
+[node name="Player" parent="." instance=ExtResource("10_wo6ni")]
 position = Vector2(191, 360)
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -1342,15 +1444,90 @@ layer_1/tile_data = PackedInt32Array(1441792, 786433, 8, 1507328, 786433, 9, 144
 layer_2/name = "Terrain"
 layer_2/tile_data = PackedInt32Array()
 
-[node name="MovingPlatform" parent="." instance=ExtResource("15_dqmgd")]
+[node name="MovingPlatform" parent="." instance=ExtResource("13_6gti7")]
 position = Vector2(1456, 286)
 
-[node name="Canon" parent="." instance=ExtResource("16_wxlnu")]
+[node name="Canon" parent="." instance=ExtResource("14_3vfnp")]
 position = Vector2(570, 148)
 
 [node name="UI_Handler" type="CanvasLayer" parent="."]
 
-[node name="PauseMenu" parent="UI_Handler" instance=ExtResource("15_1jm07")]
-visible = false
+[node name="Coin_Counter" parent="UI_Handler" instance=ExtResource("15_aknvi")]
 
-[node name="Coin_Counter" parent="UI_Handler" instance=ExtResource("16_8748q")]
+[node name="PauseMenu" type="Label" parent="UI_Handler"]
+visible = false
+offset_left = 550.0
+offset_top = 92.0
+offset_right = 577.0
+offset_bottom = 186.0
+scale = Vector2(18.5399, 6.64032)
+theme = ExtResource("16_sxevr")
+script = ExtResource("17_pghb1")
+
+[node name="Resume" type="Button" parent="UI_Handler/PauseMenu"]
+layout_mode = 0
+offset_left = 7.01237
+offset_top = 21.3845
+offset_right = 66.0124
+offset_bottom = 61.3845
+scale = Vector2(0.2047, 0.341361)
+theme = SubResource("Theme_y1bqc")
+text = " Resume"
+
+[node name="Restart" type="Button" parent="UI_Handler/PauseMenu"]
+layout_mode = 0
+offset_left = 7.06631
+offset_top = 40.5101
+offset_right = 66.0663
+offset_bottom = 80.5101
+scale = Vector2(0.2047, 0.341361)
+theme = SubResource("Theme_dcec0")
+text = " Restart
+"
+
+[node name="Quit" type="Button" parent="UI_Handler/PauseMenu"]
+layout_mode = 0
+offset_left = 7.0119
+offset_top = 59.7863
+offset_right = 66.0119
+offset_bottom = 99.7867
+scale = Vector2(0.2047, 0.341361)
+theme = SubResource("Theme_denfu")
+text = "Quit"
+
+[node name="WinScreen" type="Label" parent="UI_Handler"]
+visible = false
+offset_left = 475.0
+offset_top = 201.0
+offset_right = 515.0
+offset_bottom = 224.0
+scale = Vector2(15.577, 17.3862)
+theme = ExtResource("16_sxevr")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Next_Level" type="Button" parent="UI_Handler/WinScreen"]
+layout_mode = 0
+offset_left = 8.02464
+offset_top = 4.77389
+offset_right = 48.0246
+offset_bottom = 15.7739
+scale = Vector2(0.64019, 0.555193)
+theme = ExtResource("16_sxevr")
+text = "Resume"
+
+[node name="Restart" type="Button" parent="UI_Handler/WinScreen"]
+layout_mode = 0
+offset_left = 6.6765
+offset_top = 12.0785
+offset_right = 49.6765
+offset_bottom = 23.0785
+scale = Vector2(0.64019, 0.555193)
+theme = ExtResource("16_sxevr")
+text = "Restart"
+
+[connection signal="pressed" from="UI_Handler/PauseMenu/Resume" to="UI_Handler/PauseMenu" method="_on_resume_pressed"]
+[connection signal="pressed" from="UI_Handler/PauseMenu/Restart" to="UI_Handler/PauseMenu" method="_on_restart_pressed"]
+[connection signal="pressed" from="UI_Handler/PauseMenu/Quit" to="UI_Handler/PauseMenu" method="_on_quit_pressed"]
+[connection signal="pressed" from="UI_Handler/WinScreen/Next_Level" to="UI_Handler/PauseMenu" method="_on_next_level_pressed"]
+[connection signal="pressed" from="UI_Handler/WinScreen/Restart" to="UI_Handler/PauseMenu" method="_on_restart_pressed"]
