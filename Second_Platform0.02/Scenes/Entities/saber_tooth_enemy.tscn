@@ -140,7 +140,7 @@ script = ExtResource("1_plvlp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(0.0834274, -10.7508)
-texture = ExtResource("18_ikfdc")
+texture = ExtResource("1_0bldr")
 metadata/_edit_group_ = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

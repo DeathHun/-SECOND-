@@ -1,4 +1,5 @@
 extends StaticBody2D
+#This object detects whenever a player is near it and only then reveals itself
 
 var showing = false
 

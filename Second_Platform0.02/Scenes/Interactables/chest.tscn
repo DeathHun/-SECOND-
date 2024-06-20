@@ -1,0 +1,86 @@
+[gd_scene load_steps=14 format=3 uid="uid://dd7o27p30wapl"]
+
+[ext_resource type="Script" path="res://Scripts/Interactables/Chest.gd" id="1_mx1t6"]
+[ext_resource type="Texture2D" uid="uid://c4f4u1gtgq6kh" path="res://GameAssets/PirateFolder/Chest/Unlocked/8.png" id="2_gc288"]
+[ext_resource type="Texture2D" uid="uid://tov4ja24a22b" path="res://GameAssets/PirateFolder/Chest/Unlocked/1.png" id="3_wwqh0"]
+[ext_resource type="Texture2D" uid="uid://dsbwlwd76rn60" path="res://GameAssets/PirateFolder/Chest/Unlocked/2.png" id="4_h4c4h"]
+[ext_resource type="Texture2D" uid="uid://cn502w0rb8nbq" path="res://GameAssets/PirateFolder/Chest/Unlocked/3.png" id="5_lspj6"]
+[ext_resource type="Texture2D" uid="uid://djvqyx4eb3v2c" path="res://GameAssets/PirateFolder/Chest/Unlocked/4.png" id="6_cj15a"]
+[ext_resource type="Texture2D" uid="uid://djr2e20s18u4g" path="res://GameAssets/PirateFolder/Chest/Unlocked/5.png" id="7_stem0"]
+[ext_resource type="Texture2D" uid="uid://b7ho3v51esiph" path="res://GameAssets/PirateFolder/Chest/Unlocked/6.png" id="8_26s5w"]
+[ext_resource type="Texture2D" uid="uid://bdynvpr224djb" path="res://GameAssets/PirateFolder/Chest/Unlocked/7.png" id="9_pw7jh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qfck"]
+size = Vector2(35, 28)
+
+[sub_resource type="Animation" id="Animation_jqlgg"]
+resource_name = "Fade_Out"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"queue_free"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_2qtcv"]
+resource_name = "Unlocked"
+length = 0.7
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_wwqh0"), ExtResource("4_h4c4h"), ExtResource("5_lspj6"), ExtResource("6_cj15a"), ExtResource("7_stem0"), ExtResource("8_26s5w"), ExtResource("9_pw7jh"), ExtResource("2_gc288")]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_euhng"]
+_data = {
+"Fade_Out": SubResource("Animation_jqlgg"),
+"Unlocked": SubResource("Animation_2qtcv")
+}
+
+[node name="Chest" type="Node2D"]
+script = ExtResource("1_mx1t6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("3_wwqh0")
+
+[node name="Area2D" type="Area2D" parent="."]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0.5, 2)
+shape = SubResource("RectangleShape2D_5qfck")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_euhng")
+}
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

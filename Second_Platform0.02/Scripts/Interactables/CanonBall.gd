@@ -1,4 +1,5 @@
 extends Node2D
+#The balls that come out whenever the canon shoots
 
 var direction
 var speed = 200.0

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://q61e8c8fd65m"]
+[gd_scene load_steps=6 format=3 uid="uid://q61e8c8fd65m"]
 
 [ext_resource type="Theme" uid="uid://ccog3jsgfhauc" path="res://Resources/Default(1).tres" id="1_qwuxt"]
 [ext_resource type="Script" path="res://Scripts/UI/UiManager.gd" id="2_1gaqt"]
 [ext_resource type="Texture2D" uid="uid://cbbwq1rvnp8im" path="res://GameAssets/PirateGameAssets/Episode16/Coin.png" id="3_4d61j"]
+[ext_resource type="Texture2D" uid="uid://ckp6ee6jdxp7l" path="res://GameAssets/PirateGameAssets/Episode9/Heart.png" id="4_c7epg"]
+[ext_resource type="Texture2D" uid="uid://577fxsof1clm" path="res://GameAssets/PirateFolder/Golden Skull/02.png" id="5_qc87q"]
 
 [node name="Coin_Counter" type="Control"]
 layout_mode = 3
@@ -18,19 +20,81 @@ layer = 3
 script = ExtResource("2_1gaqt")
 
 [node name="CoinIcon" type="TextureRect" parent="UiManager"]
-offset_left = 3.0
-offset_top = -1.0
-offset_right = 23.0
-offset_bottom = 19.0
+offset_top = 1.0
+offset_right = 20.0
+offset_bottom = 21.0
+scale = Vector2(2.4186, 2.4186)
 texture = ExtResource("3_4d61j")
-metadata/_edit_use_anchors_ = true
 
 [node name="CoinDisplay" type="Label" parent="UiManager"]
-offset_left = 22.0
-offset_top = -4.0
-offset_right = 62.0
-offset_bottom = 30.0
+offset_left = 48.0
+offset_right = 88.0
+offset_bottom = 34.0
+scale = Vector2(2.00198, 2.00198)
+theme_override_colors/font_color = Color(0.780392, 0.376471, 0.105882, 1)
+theme_override_font_sizes/font_size = 18
+text = "0"
+
+[node name="HeartIcon" type="TextureRect" parent="UiManager"]
+offset_top = 41.0
+offset_right = 40.0
+offset_bottom = 81.0
+scale = Vector2(1.26054, 1.26054)
+texture = ExtResource("4_c7epg")
+
+[node name="HeartDisplay" type="Label" parent="UiManager"]
+offset_left = 48.0
+offset_top = 41.0
+offset_right = 88.0
+offset_bottom = 75.0
+scale = Vector2(2.00198, 2.00198)
 theme_override_colors/font_color = Color(0.760784, 0.372549, 0.384314, 1)
 theme_override_font_sizes/font_size = 18
 text = "0"
-metadata/_edit_use_anchors_ = true
+
+[node name="EnemyIcon" type="TextureRect" parent="UiManager"]
+offset_left = 7.0
+offset_top = 79.0
+offset_right = 47.0
+offset_bottom = 119.0
+scale = Vector2(0.9141, 0.9141)
+texture = ExtResource("5_qc87q")
+
+[node name="EnemyDisplay" type="Label" parent="UiManager"]
+offset_left = 48.0
+offset_top = 79.0
+offset_right = 88.0
+offset_bottom = 113.0
+scale = Vector2(2.00198, 2.00198)
+theme_override_colors/font_color = Color(0.682353, 0.501961, 0.529412, 1)
+theme_override_font_sizes/font_size = 18
+text = "0"
+
+[node name="Panel" type="Panel" parent="UiManager"]
+offset_left = 1348.0
+offset_top = 1.0
+offset_right = 1500.0
+offset_bottom = 41.0
+
+[node name="MSeconds" type="Label" parent="UiManager/Panel"]
+layout_mode = 0
+offset_left = 83.0
+offset_right = 120.0
+offset_bottom = 23.0
+scale = Vector2(1.71146, 1.6844)
+text = "0000"
+
+[node name="Seconds" type="Label" parent="UiManager/Panel"]
+layout_mode = 0
+offset_left = 41.0
+offset_right = 64.0
+offset_bottom = 23.0
+scale = Vector2(1.71146, 1.6844)
+text = "00:"
+
+[node name="Minutes" type="Label" parent="UiManager/Panel"]
+layout_mode = 0
+offset_right = 23.0
+offset_bottom = 23.0
+scale = Vector2(1.71146, 1.6844)
+text = "00:"

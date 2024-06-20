@@ -20,21 +20,23 @@ var wall_normal : Vector2
 var jump_available : bool = true
 
 #heatlh bar
-var max_health = 2
+var max_health = 5
 var health = 0
 var can_take_damage = true
 @export var hit = false 
 
-
+#This function is called whenever the scene first opens
 func _ready():
 	health = max_health
 	GameManager.player = self
 
+#This function is called every second
 func _process(delta):
 	if Input.is_action_just_pressed("attack") && !hit:
 		attack()
+	GameManager.health = health 
 
-
+#This function is called every second
 func _physics_process(delta):
 	
 	if Input.is_action_pressed("down") && is_on_floor():
@@ -53,10 +55,12 @@ func _physics_process(delta):
 		death()
 	
 
+#This function adds gravity
 func add_gravity(delta):
 	if not is_on_floor():
 		velocity.y += 1.25 * gravity * delta
 
+#This function gets the user's input and travels in the respective direction and also controls forces like friction and air resistance
 func movement(delta):
 	var direction = Input.get_axis("left", "right")
 	if direction != 0:
@@ -69,6 +73,7 @@ func movement(delta):
 		else:
 			velocity.x = move_toward(velocity.x, 0, delta*friction)
 
+#This function controls the player's jumping movement which a coyote_timer which is a period after the player leaves a floor and is able to jump before the timer ends
 func jump_action():
 	if is_on_floor():
 		air_jump = false
@@ -95,6 +100,7 @@ func jump_action():
 func Coyote_Timeout():
 	jump_available = false
 
+#This function is called when on a wall
 func handle_wall_jump():
 	if not is_on_wall(): return
 	if is_on_wall_only() and Input.is_action_just_pressed("right"):
@@ -107,6 +113,7 @@ func handle_wall_jump():
 		velocity.x = wall_normal.x * speed 
 		velocity.y = jump_velocity
 
+#This function controls the player's animations
 func update_animation():
 	if !attacking && !hit:
 		if velocity.x < 0:
@@ -129,6 +136,7 @@ func update_animation():
 		if velocity.y > 0 and not is_on_floor():
 			animation.play("Fall")
 
+#This function is called when it interacts with any enemies 
 func take_damage(damage_amount: int):
 	if can_take_damage:
 		iframes()
@@ -142,14 +150,17 @@ func take_damage(damage_amount: int):
 		if health <= 0:
 			death()
 
+#This function creates a time frame where the player is immune for a short period
 func  iframes():
 	can_take_damage = false
 	await get_tree().create_timer(1).timeout
 	can_take_damage = true
 
+#This function just calles a method from a global script which allows the player to respawn
 func death():
 	GameManager.respawn_player()
 
+#This function is called when the player left clicks on the mouse and will attack an enemy
 func attack():
 	var overlapping_objects = $AttackArea.get_overlapping_areas()
 	

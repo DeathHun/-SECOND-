@@ -13,10 +13,12 @@ var max_health = 2
 var hit = false
 var can_attack = true
 
+#This function is called whenever this scene first runs
 func _ready():
 	health = max_health
 	$AnimationPlayer.play("Run")
 
+#This function is called every seconds while the scene is running
 func _physics_process(delta):
 	
 	apply_grav(delta)
@@ -31,14 +33,16 @@ func _physics_process(delta):
 	
 	move_and_slide()
 
-
+#This function controles how fast the enemy walks
 func movement():
 	velocity.x = speed
 
+#This function applies gravity
 func apply_grav(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
+#This function is called to change the direction of the sprite of the enemy
 func flip():
 	facing_right = !facing_right
 	
@@ -48,16 +52,19 @@ func flip():
 	else:
 		speed = abs(speed) * -1
 
-
+#This function is called whenever the players enters it's "area_2d"
 func _on_hitbox_area_entered(area):
 	if area.get_parent() is Player && !dead && can_attack:
 		area.get_parent().take_damage(1)
 
+#This function is used to kill and remove the enemy from the scenes
 func death():
 	dead = true
 	speed=0
 	$AnimationPlayer.play("Dead")
+	#This animation has an inbuilt method called "queue_free()" which just removes the enemy from the main scene
 
+#This function is called when the player's "area_2d" interacts with this enemy
 func take_damage(damage_taken: int):
 	if !dead:
 		$AnimationPlayer.play("Hit")
@@ -68,7 +75,9 @@ func take_damage(damage_taken: int):
 		
 		if health <= 0:
 			death()
+			GameManager.enemies_defeated += 1
 
+#This function is called when the player's "area_2d" interacts with this enemy
 func get_hit():
 	hit = !hit
 	

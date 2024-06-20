@@ -1,5 +1,5 @@
 extends StaticBody2D
-
+#An enemy type
 
 var canon_ball = load("res://Scenes/Interactables/canon_ball.tscn")
 var debris = load("res://Scenes/Interactables/cannon_debris.tscn")
@@ -45,5 +45,6 @@ func death():
 	spawned_debris.scale.x = scale.x
 	spawned_debris.get_child(1).play("Crumble")
 	get_tree().get_root().get_child(1).add_child(spawned_debris)
+	GameManager.enemies_defeated += 1
 	queue_free()
 

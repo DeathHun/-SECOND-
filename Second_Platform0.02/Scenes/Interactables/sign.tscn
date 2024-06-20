@@ -45,7 +45,7 @@ scale = Vector2(0.701566, 0.701566)
 theme_override_fonts/font = ExtResource("3_us75w")
 theme_override_font_sizes/font_size = 7
 text = "Follow The 
-Right Path"
+\"Right\" Way"
 
 [node name="Area2D" type="Area2D" parent="."]
 position = Vector2(-31, -16)

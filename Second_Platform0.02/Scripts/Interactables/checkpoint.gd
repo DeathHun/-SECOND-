@@ -1,6 +1,7 @@
 extends Node2D
 class_name Checkpoint
 
+# A save point for the player
 
 @export var spawnpoint : bool = false
 @export var win_condition = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://byl1drg3qhgfg"]
+[gd_scene load_steps=35 format=3 uid="uid://byl1drg3qhgfg"]
 
 [ext_resource type="Texture2D" uid="uid://cym5u1f0nctbl" path="res://GameAssets/PirateGameAssets/Episode4/Spritesheet/BG Image.png" id="1_5cw5n"]
 [ext_resource type="PackedScene" uid="uid://wpqp8kcxtkvs" path="res://Scenes/Interactables/health_up.tscn" id="2_vh4kf"]
@@ -19,6 +19,8 @@
 [ext_resource type="Script" path="res://Scripts/UI/Pausemenu(LevelVr).gd" id="17_pghb1"]
 [ext_resource type="Texture2D" uid="uid://cyt5jy77mmvos" path="res://GameAssets/GUI_Elements/GUI.png" id="18_eha6s"]
 [ext_resource type="FontFile" uid="uid://cspk4w5i1mgge" path="res://GameAssets/GUI_Elements/MinimalPixel v2.ttf" id="19_u1ljf"]
+[ext_resource type="PackedScene" uid="uid://b8ste05r2tjyo" path="res://Scenes/Interactables/key.tscn" id="20_6k3jn"]
+[ext_resource type="PackedScene" uid="uid://dd7o27p30wapl" path="res://Scenes/Interactables/chest.tscn" id="21_s4fob"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lyt7b"]
 texture = ExtResource("11_jkpoj")
@@ -1275,7 +1277,7 @@ Label/styles/normal = SubResource("StyleBoxTexture_mttxu")
 ProgressBar/styles/background = SubResource("StyleBoxTexture_821v8")
 ProgressBar/styles/fill = SubResource("StyleBoxTexture_q8tb5")
 
-[node name="LevelOne" type="Node2D"]
+[node name="TestLevel" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -5014.0
@@ -1525,6 +1527,12 @@ offset_bottom = 23.0785
 scale = Vector2(0.64019, 0.555193)
 theme = ExtResource("16_sxevr")
 text = "Restart"
+
+[node name="Key" parent="." instance=ExtResource("20_6k3jn")]
+position = Vector2(365, 255)
+
+[node name="Chest" parent="." instance=ExtResource("21_s4fob")]
+position = Vector2(320, 463)
 
 [connection signal="pressed" from="UI_Handler/PauseMenu/Resume" to="UI_Handler/PauseMenu" method="_on_resume_pressed"]
 [connection signal="pressed" from="UI_Handler/PauseMenu/Restart" to="UI_Handler/PauseMenu" method="_on_restart_pressed"]

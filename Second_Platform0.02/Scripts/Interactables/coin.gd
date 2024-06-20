@@ -1,4 +1,5 @@
 extends Node2D
+#When a player gets them all they get a special trophy
 
 func _ready():
 	$AnimationPlayer.play("Idle")

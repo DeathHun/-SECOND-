@@ -1,0 +1,238 @@
+[gd_scene load_steps=23 format=3 uid="uid://ymga1cffn0vs"]
+
+[ext_resource type="Texture2D" uid="uid://cym5u1f0nctbl" path="res://GameAssets/PirateGameAssets/Episode4/Spritesheet/BG Image.png" id="1_yqtmb"]
+[ext_resource type="PackedScene" uid="uid://d17ejxaqp08vu" path="res://Scenes/Entities/player.tscn" id="2_ki6nq"]
+[ext_resource type="PackedScene" uid="uid://q61e8c8fd65m" path="res://Scenes/UI/Coin_Counter.tscn" id="3_fgfjb"]
+[ext_resource type="Theme" uid="uid://ccog3jsgfhauc" path="res://Resources/Default(1).tres" id="4_n8j81"]
+[ext_resource type="Script" path="res://Scripts/UI/Pausemenu(LevelVr).gd" id="5_57dwx"]
+[ext_resource type="Texture2D" uid="uid://cyt5jy77mmvos" path="res://GameAssets/GUI_Elements/GUI.png" id="6_gtrde"]
+[ext_resource type="FontFile" uid="uid://cspk4w5i1mgge" path="res://GameAssets/GUI_Elements/MinimalPixel v2.ttf" id="7_qphrn"]
+[ext_resource type="Script" path="res://Scripts/UI/WinScreen.gd" id="8_7pfjd"]
+[ext_resource type="Texture2D" uid="uid://dcduum4ugvlul" path="res://GameAssets/PirateFolder/Chest/Idle/1.png" id="9_owc0l"]
+[ext_resource type="Texture2D" uid="uid://cbbwq1rvnp8im" path="res://GameAssets/PirateGameAssets/Episode16/Coin.png" id="10_o6wnu"]
+[ext_resource type="Texture2D" uid="uid://577fxsof1clm" path="res://GameAssets/PirateFolder/Golden Skull/02.png" id="11_o1uep"]
+[ext_resource type="PackedScene" uid="uid://dmkhn8q5nd57m" path="res://Scenes/WorldScene/tile_map.tscn" id="12_3d5yu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3opgr"]
+texture = ExtResource("6_gtrde")
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_638c0"]
+texture = ExtResource("6_gtrde")
+region_rect = Rect2(113, 113, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qo5yq"]
+texture = ExtResource("6_gtrde")
+region_rect = Rect2(113, 98, 30, 13)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8yhna"]
+texture = ExtResource("6_gtrde")
+region_rect = Rect2(113, 81, 30, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mttxu"]
+texture = ExtResource("6_gtrde")
+region_rect = Rect2(0, 96, 48, 32)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_821v8"]
+texture = ExtResource("6_gtrde")
+expand_margin_left = 1.0
+expand_margin_top = 1.0
+expand_margin_right = 1.0
+expand_margin_bottom = 1.0
+region_rect = Rect2(135, 20, 52, 7)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_q8tb5"]
+texture = ExtResource("6_gtrde")
+region_rect = Rect2(72, 22, 49, 3)
+
+[sub_resource type="Theme" id="Theme_y1bqc"]
+default_font = ExtResource("7_qphrn")
+Button/font_sizes/font_size = 14
+Button/styles/focus = SubResource("StyleBoxTexture_3opgr")
+Button/styles/hover = SubResource("StyleBoxTexture_638c0")
+Button/styles/normal = SubResource("StyleBoxTexture_qo5yq")
+Button/styles/pressed = SubResource("StyleBoxTexture_8yhna")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("7_qphrn")
+Label/styles/normal = SubResource("StyleBoxTexture_mttxu")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_821v8")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_q8tb5")
+
+[sub_resource type="Theme" id="Theme_dcec0"]
+default_font = ExtResource("7_qphrn")
+Button/font_sizes/font_size = 14
+Button/styles/focus = SubResource("StyleBoxTexture_3opgr")
+Button/styles/hover = SubResource("StyleBoxTexture_638c0")
+Button/styles/normal = SubResource("StyleBoxTexture_qo5yq")
+Button/styles/pressed = SubResource("StyleBoxTexture_8yhna")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("7_qphrn")
+Label/styles/normal = SubResource("StyleBoxTexture_mttxu")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_821v8")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_q8tb5")
+
+[sub_resource type="Theme" id="Theme_denfu"]
+default_font = ExtResource("7_qphrn")
+Button/font_sizes/font_size = 14
+Button/styles/focus = SubResource("StyleBoxTexture_3opgr")
+Button/styles/hover = SubResource("StyleBoxTexture_638c0")
+Button/styles/normal = SubResource("StyleBoxTexture_qo5yq")
+Button/styles/pressed = SubResource("StyleBoxTexture_8yhna")
+Label/colors/font_color = Color(1, 1, 1, 1)
+Label/colors/font_outline_color = Color(1, 1, 1, 1)
+Label/colors/font_shadow_color = Color(0, 0, 0, 0)
+Label/constants/line_spacing = 3
+Label/constants/outline_size = 0
+Label/constants/shadow_offset_x = 1
+Label/constants/shadow_offset_y = 1
+Label/constants/shadow_outline_size = 1
+Label/font_sizes/font_size = 8
+Label/fonts/font = ExtResource("7_qphrn")
+Label/styles/normal = SubResource("StyleBoxTexture_mttxu")
+ProgressBar/styles/background = SubResource("StyleBoxTexture_821v8")
+ProgressBar/styles/fill = SubResource("StyleBoxTexture_q8tb5")
+
+[node name="BaseLevel" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -5014.0
+offset_top = -1697.0
+offset_right = -1861.0
+offset_bottom = -646.0
+scale = Vector2(3.36928, 3.27211)
+texture = ExtResource("1_yqtmb")
+
+[node name="Player" parent="." instance=ExtResource("2_ki6nq")]
+position = Vector2(191, 360)
+
+[node name="UI_Handler" type="CanvasLayer" parent="."]
+
+[node name="Coin_Counter" parent="UI_Handler" instance=ExtResource("3_fgfjb")]
+
+[node name="PauseMenu" type="Label" parent="UI_Handler"]
+visible = false
+offset_left = 550.0
+offset_top = 92.0
+offset_right = 577.0
+offset_bottom = 186.0
+scale = Vector2(18.5399, 6.64032)
+theme = ExtResource("4_n8j81")
+script = ExtResource("5_57dwx")
+
+[node name="Resume" type="Button" parent="UI_Handler/PauseMenu"]
+layout_mode = 0
+offset_left = 7.01237
+offset_top = 21.3845
+offset_right = 66.0124
+offset_bottom = 61.3845
+scale = Vector2(0.2047, 0.341361)
+theme = SubResource("Theme_y1bqc")
+text = " Resume"
+
+[node name="Restart" type="Button" parent="UI_Handler/PauseMenu"]
+layout_mode = 0
+offset_left = 7.06631
+offset_top = 40.5101
+offset_right = 66.0663
+offset_bottom = 80.5101
+scale = Vector2(0.2047, 0.341361)
+theme = SubResource("Theme_dcec0")
+text = " Restart
+"
+
+[node name="Quit" type="Button" parent="UI_Handler/PauseMenu"]
+layout_mode = 0
+offset_left = 7.0119
+offset_top = 59.7863
+offset_right = 66.0119
+offset_bottom = 99.7867
+scale = Vector2(0.2047, 0.341361)
+theme = SubResource("Theme_denfu")
+text = "Quit"
+
+[node name="WinScreen" type="Label" parent="UI_Handler"]
+visible = false
+offset_left = 418.0
+offset_top = 129.0
+offset_right = 458.0
+offset_bottom = 152.0
+scale = Vector2(19.2149, 23.0954)
+theme = ExtResource("4_n8j81")
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("8_7pfjd")
+
+[node name="Next_Level" type="Button" parent="UI_Handler/WinScreen"]
+layout_mode = 0
+offset_left = 5.93346
+offset_top = 10.6411
+offset_right = 45.9334
+offset_bottom = 21.6411
+scale = Vector2(0.331817, 0.287762)
+theme = ExtResource("4_n8j81")
+text = "Resume"
+
+[node name="Restart" type="Button" parent="UI_Handler/WinScreen"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 15.4289
+offset_right = 47.0
+offset_bottom = 26.4289
+scale = Vector2(0.335277, 0.290763)
+theme = ExtResource("4_n8j81")
+text = "Restart"
+
+[node name="TextureRect" type="TextureRect" parent="UI_Handler/WinScreen"]
+visible = false
+layout_mode = 0
+offset_left = 6.40129
+offset_top = 3.42059
+offset_right = 46.4013
+offset_bottom = 43.4206
+scale = Vector2(0.163375, 0.163375)
+texture = ExtResource("9_owc0l")
+
+[node name="TextureRect2" type="TextureRect" parent="UI_Handler/WinScreen"]
+visible = false
+layout_mode = 0
+offset_left = 16.2374
+offset_top = 3.68039
+offset_right = 56.2374
+offset_bottom = 43.6804
+scale = Vector2(0.179652, 0.158035)
+texture = ExtResource("10_o6wnu")
+
+[node name="TextureRect3" type="TextureRect" parent="UI_Handler/WinScreen"]
+visible = false
+layout_mode = 0
+offset_left = 26.2297
+offset_top = 3.42059
+offset_right = 66.2297
+offset_bottom = 43.4206
+scale = Vector2(0.163375, 0.163375)
+texture = ExtResource("11_o1uep")
+
+[node name="TileMap" parent="." instance=ExtResource("12_3d5yu")]
+layer_0/tile_data = PackedInt32Array(1572873, 0, 0, 1638409, 0, 1, 1703945, 0, 2, 1769481, 0, 3, 1835017, 0, 4, 1900553, 0, 5, 1572874, 65536, 0, 1638410, 65536, 1, 1703946, 65536, 2, 1769482, 65536, 3, 1835018, 65536, 4, 1900554, 65536, 5, 1572875, 131072, 0, 1638411, 131072, 1, 1703947, 131072, 2, 1769483, 131072, 3, 1835019, 131072, 4, 1900555, 131072, 5, 1572876, 196608, 0, 1638412, 196608, 1, 1703948, 196608, 2, 1769484, 196608, 3, 1835020, 196608, 4, 1900556, 196608, 5, 1572877, 262144, 0, 1638413, 262144, 1, 1703949, 262144, 2, 1769485, 262144, 3, 1835021, 262144, 4, 1900557, 262144, 5, 1572878, 327680, 0, 1638414, 327680, 1, 1703950, 327680, 2, 1769486, 327680, 3, 1835022, 327680, 4, 1900558, 327680, 5)
+
+[connection signal="pressed" from="UI_Handler/PauseMenu/Resume" to="UI_Handler/PauseMenu" method="_on_resume_pressed"]
+[connection signal="pressed" from="UI_Handler/PauseMenu/Restart" to="UI_Handler/PauseMenu" method="_on_restart_pressed"]
+[connection signal="pressed" from="UI_Handler/PauseMenu/Quit" to="UI_Handler/PauseMenu" method="_on_quit_pressed"]
+[connection signal="pressed" from="UI_Handler/WinScreen/Next_Level" to="UI_Handler/PauseMenu" method="_on_next_level_pressed"]
+[connection signal="pressed" from="UI_Handler/WinScreen/Restart" to="UI_Handler/PauseMenu" method="_on_restart_pressed"]
